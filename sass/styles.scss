@@ -1,0 +1,711 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+/* HTML element (SMACSS base) rules */
+@import "normalize";
+
+/* Layout rules */
+@import "layouts/responsive";
+
+/* Component (SMACSS module) rules */
+@import "components/misc";
+// Optionally, add your own components here.
+@import "print";
+
+/* SMACSS theme rules */
+/* @import "theme-A"; */
+/* @import "theme-B"; */
+
+body{
+	img{
+		height: auto !important;
+	}
+	a{
+		color: #7e6b5a;
+		text-decoration: none;
+	}
+}
+
+body.front #content{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+body.front #navigation .sub-menu{
+	display: none;
+}
+
+body.latest-news h1#page-title{
+	display: inline-block;
+	width: 216px;
+	height: 83px;
+	background: url(../images/title-news.png) no-repeat;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+body.page-aphro-board h1#page-title{
+	margin: 0px;
+	background: url(../images/title-article.png) no-repeat;
+	display: inline-block;
+	width: 254px;
+	height: 126px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+body.page-testimonial h1#page-title{
+	margin: 0px;
+	background: url(../images/title-story.png) no-repeat;
+	display: inline-block;
+	width: 269px;
+	height: 83px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+body.page-media-report h1#page-title{
+	margin: 0px;
+	background: url(../images/title-youtube.png) no-repeat;
+	display: inline-block;
+	width: 223px;
+	height: 83px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+body.page-schedule h1#page-title{
+	margin: 0px;
+	background: url(../images/title-schedule.png) no-repeat;
+	display: inline-block;
+	width: 323px;
+	height: 83px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+#header{
+	padding-top: 5px;
+	background: url(../images/header-background.png);
+	background-size: cover;
+	position: relative;
+	.header__region{
+		clear: none;
+		#block-nodeblock-897{
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			margin-bottom: 0px;
+			ul{
+				margin: 0px;
+				padding: 0px;
+				li{
+					list-style-type: none;
+					display: inline-block;
+					margin-right: 5px;
+				}
+
+			}
+		}
+	}
+}
+//end of header
+
+.header-divid{
+	display: block;
+	width: 100%;
+	height: 26px;
+	background: url(../images/divid-pic.png) no-repeat;
+	background-size: cover;
+}
+
+#navigation{
+	#block-menu-block-8{
+		width: 90%;
+		padding: 10px 5%;
+		margin-bottom: 0px;
+        ul.menu{
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            display: block;
+            width: 100%;
+            height: 24px;
+            li{
+                float: none;
+                display: inline-block;
+                list-style-image: none;
+                line-height: 18px;
+                padding: 0px 20px;
+                a{
+                    color: #000;
+                }
+            }
+            li.expanded{
+            	ul.menu{
+            		display: none;
+            	}
+            }
+            li.active-trail.expanded{
+            	position: relative;
+            	ul.menu{
+            		display: block;
+            		position: absolute;
+            		left: 0px;
+            		bottom: -42px;
+            		width: 500px;
+            		text-align: left;
+            		li{
+            			display: inline-block;
+            			border-right: 1px #FFF solid;
+            			a{
+            				color: #FFF;
+            			}
+            			&:last-child{
+            				border-right: 0px;
+            			}
+            		}
+            		&:before{
+            			width: 0;
+						height: 0;
+						border-left: 10px solid transparent;
+						border-right: 10px solid transparent;
+						border-bottom: 20px solid #6a7c89;
+						content: ' ';
+						position: absolute;
+						top: -15px;
+						left: 40px;
+						z-index: -10;
+
+            		}
+            	}
+            }
+        }
+    }
+    .sub-menu{
+    	display: block;
+    	width: 100%;
+    	background: #6a7c89;
+    	height: 30px;
+    	margin-bottom: 5px;
+    }
+}
+
+#content{
+	color: #8d8e8f;
+	.breadcrumb{
+		text-align: right;
+	}
+	//首頁
+
+	.panels-flexible-region-83-center{
+		width: 100%;
+		.pane-mosilin-slideshow{
+            position: relative;
+            width: 100%;
+            padding-bottom: 56%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 10px;
+            img {
+                width: 100%;
+            }
+            a {
+            }
+            .views-slideshow-cycle-main-frame,
+            .views-slideshow-cycle-main-frame-row,
+            .views-slideshow-cycle-main-frame-row img {
+                width: 100% !important;
+                height: auto;
+            }
+           	.field-content { max-width: 100%; width: 100%;}                                   
+ 			.field-content img { max-width: 100%; width: 100%; height: auto; margin: 0; padding:0;}
+           
+            .views-slideshow-controls-bottom {
+                clear: both;
+                z-index: 30;
+                bottom:2px;
+                position: absolute;
+                display: inline-block;
+                width:100%;
+                #widget_pager_bottom_mosilin_slideshow-block_2{
+                    margin: 0 auto;
+                    display: block;
+                    .views-slideshow-pager-field-item {
+                        display: inline-block;
+                        padding: 15px 0px;
+                        cursor: pointer;
+                        color: #59493f;
+                        font-size: 18px;
+                        background: rgba(158, 140, 118, 0.9);
+                        font-weight: bold;
+                        .views-content-title {
+                            text-align: center;
+                        }
+                    }
+                    .views-slideshow-pager-field-item.active {
+                        position: relative;
+                        color: #fff;
+                        .views-content-title {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            #views_slideshow_controls_text_mosilin_slideshow-block_2 {
+                #views_slideshow_controls_text_pause_mosilin_slideshow-block_2{
+                    display: none;
+                }
+                #views_slideshow_controls_text_previous_mosilin_slideshow-block_2{
+                	display: none;
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    z-index: 30;
+                    margin-top: -14px;
+                    a {
+                        background: url(../images/arrow_1.png) no-repeat;
+                        width: 20px;
+                        height: 35px;
+                        text-indent: -9999px;
+                        overflow: hidden;
+                        display: block;
+                    }
+                }
+                #views_slideshow_controls_text_next_mosilin_slideshow-block_2{
+                	display: none;
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    z-index: 30;
+                    margin-top: -14px;
+                    a {
+                        display: block;
+                        background: url(../images/arrow_2.png) no-repeat;
+                        width: 20px;
+                        height: 35px;
+                        text-indent: -9999px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+		#flexslider-1{
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 8px;
+			.flex-control-nav{
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				z-index: 90;
+				width: auto;
+				li{
+					display: inline-block;
+					width: 73px;
+					height: 67px;
+					margin: 0px 5px 0px 0px;
+					a{
+						display: block;
+						width: 100%;
+						height: 100%;
+						background: url(../images/nav-background.png);
+						border-radius: 0px;
+						border:0px;
+						text-indent: 0px;
+						color: #59493f;
+						line-height: 67px;
+						font-size: 32px;
+					}
+					a.flex-active{
+						color: #FFF;
+					}
+				}
+			}
+			.views-field-title{
+				position: absolute;
+				bottom: 0px;
+				left: 235px;
+				display: block;
+				height: 67px;
+				background: rgba(199,184,165,0.85);
+				color: #FFF;
+				line-height: 67px;
+				font-size: 24px;
+				padding: 0px 10px;
+			}
+		}
+	}
+	
+	#node-893{//醫師個人介紹區塊
+
+		.profile{
+			position: relative;
+			font-size: 18px;
+			margin: 0px;
+			img{
+				width: 100% !important;
+			}
+			a.introduce{
+				display: inline-block;
+				width: 49.8%;
+				position: absolute;
+				left: 0px;
+				bottom: 3px;
+				line-height: 40px;
+				color: #FFF;
+				text-align: center;
+				background: rgba(166,147,124,0.8);
+			}
+			a.schedule{
+				display: inline-block;
+				width: 49.5%;
+				position: absolute;
+				right: 0px;
+				bottom: 3px;
+				line-height: 40px;
+				color: #FFF;
+				text-align: center;
+				background: rgba(166,147,124,0.8);
+			}
+		}	
+	}
+	#node-894,#node-895{
+		@include zen-grid-item-base();
+		img{
+			width: 100% !important;
+		}
+		p{margin: 0px;}
+	}
+	.pane-mosilin-media{
+		.views-slideshow-cycle-main-frame,
+        .views-slideshow-cycle-main-frame-row,
+        .views-slideshow-cycle-main-frame-row img {
+            width: 100% !important;
+            height: auto;
+        }
+       	.field-content { max-width: 100%; width: 100%;}                                   
+		.field-content img { max-width: 100%; width: 100%; height: auto; margin: 0; padding:0;}
+		h2.pane-title{
+			margin: 0px;
+			background: url(../images/title-youtube.png) no-repeat;
+			display: inline-block;
+			width: 223px;
+			height: 83px;
+			overflow: hidden;
+			text-indent: -9999px;
+		}
+		h2.title{
+			margin: 0px;
+			font-size: 22px;
+		}
+	}
+	.beauty-block{
+		img{
+			width: 100%;
+		}
+		h2.title{
+			margin: 0px;
+			font-size: 18px;
+			font-weight: normal;
+			line-height: 24px;
+		}
+	}
+	.pane-mosilin-beauty-see{
+		h2.pane-title{
+			margin: 0px;
+			background: url(../images/title-story.png) no-repeat;
+			display: inline-block;
+			width: 269px;
+			height: 83px;
+			overflow: hidden;
+			text-indent: -9999px;
+		}
+		
+	}
+	.service{
+		h2.pane-title{
+			margin: 0px;
+			background: url(../images/title-surgery.png) no-repeat left bottom;
+			display: inline-block;
+			width: 275px;
+			height: 126px;
+			overflow: hidden;
+			text-indent: -9999px;
+		}
+	}
+	.board{
+		h2.pane-title{
+			margin: 0px;
+			background: url(../images/title-article.png) no-repeat;
+			display: inline-block;
+			width: 254px;
+			height: 126px;
+			overflow: hidden;
+			text-indent: -9999px;
+		}
+	}
+	
+	.article-list{
+		margin-top: 20px;
+		.article-list-row{
+			display: inline-block;
+			width: 100%;
+			margin-bottom: 20px;
+			border-bottom: 1px dashed #c7b8a5;
+			img{
+				float: left;
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}
+			h2.title{
+				margin: 0px;
+				font-size: 20px;
+				line-height: 40px;
+			}
+			p{
+				margin: 0px;
+			}
+			.views-field-created{
+				color: #5a4b3e;
+			}
+		}
+	}
+
+	ul.grid-list{
+		padding: 0px;
+		margin: 0px;
+		display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+		li{
+			display: -webkit-flex;
+	        display: -ms-flexbox;
+	        display: flex;
+			list-style-image: none;
+			list-style-type: none;
+			margin-bottom: 20px;
+			border: 1px solid #6a7c89;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			img{
+				width: 100%;
+				float: left;
+			}
+			h2.title{
+				margin: 0px;
+				font-size: 18px;
+				line-height: 30px;
+			}
+			p{
+				margin: 0px;
+			}
+			.views-field-created{
+				color: #5a4b3e;
+			}
+		}
+	}
+	.pane-mosilin-doctor-introduce{
+		background: url(../images/introduct-background.jpg) no-repeat;
+		padding-top: 300px;
+	}
+
+	.pane-aphrodite-location{
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 20px;
+		.clinic-image{
+			float: left;
+			margin-right: 5px;
+			margin-bottom: 5px;
+		}
+	}
+	.pane-webform-client-block-899{
+		clear: both;
+		margin-top: 60px;
+		position: relative;
+		h2.pane-title{
+			margin: 0px;
+			text-align: center;
+			display: block;
+			max-width: 300px;
+			height: 42px;
+			background: #7e6b5a;
+			color: #FFF;
+			position: absolute;
+			top: -42px;
+			left: 50%;
+			margin-left: -150px;
+
+		}
+	}
+	#webform-client-form-899{
+		border-radius: 5px;
+		border: 2px solid #7e6b5a;
+		padding: 20px 5%;
+		margin-bottom: 20px;
+		.form-item{
+			clear: both;
+		}
+		label{
+			width: 150px;
+			display: inline-block;
+			&:before{
+				content:'► ';
+			}
+		}
+		#webform-component-2751-7700 p{
+			margin:0px;
+			border-bottom: 1px #7e6b5a solid;
+		}
+		.webform-component-textarea{
+			clear: both;
+			label{
+				float: left;
+				display: block;
+				width: 170px;
+			}
+			.form-textarea-wrapper{
+				display: block;
+				max-width: 500px;
+				float: left;
+			}
+		}
+		.webform-component-markup{
+			padding-top: 5px;
+			p{
+				text-align: center;
+			}
+		}
+		.form-actions{
+			text-align: center;
+			input[type="submit"]{
+				background: #7e6b5a;
+				border: 0px;
+				box-shadow: none;
+				color: #FFF;
+				padding: 10px 70px;
+				font-size: 24px;
+			}
+		}
+	}
+}
+//end of content
+
+.sidebars{
+	.block{
+		margin-bottom: 0px;
+	}
+	#node-893{//醫師個人介紹區塊
+		.profile{
+			position: relative;
+			font-size: 18px;
+			margin: 0px;
+			img{
+				width: 100% !important;
+			}
+			a.introduce{
+				display: inline-block;
+				width: 49.8%;
+				position: absolute;
+				left: 0px;
+				bottom: 3px;
+				line-height: 40px;
+				color: #FFF;
+				text-align: center;
+				background: rgba(166,147,124,0.8);
+			}
+			a.schedule{
+				display: inline-block;
+				width: 49.5%;
+				position: absolute;
+				right: 0px;
+				bottom: 3px;
+				line-height: 40px;
+				color: #FFF;
+				text-align: center;
+				background: rgba(166,147,124,0.8);
+			}
+		}	
+	}
+	#node-894,#node-895{
+		img{
+			width: 100% !important;
+		}
+		p{margin: 0px;}
+	}
+
+	#block-views-mosilin-beauty-see-block-4{
+		margin-top: 10px;
+		h2.pane-title{
+			margin: 0px;
+			background: url(../images/title-story.png) no-repeat;
+			display: inline-block;
+			width: 269px;
+			height: 83px;
+			overflow: hidden;
+			text-indent: -9999px;
+		}
+		.beauty-block{
+			margin-bottom: 10px;
+			img{
+				width: 100%;
+			}
+			h2.title{
+				margin: 0px;
+				font-size: 18px;
+				font-weight: normal;
+				line-height: 24px;
+			}
+		}	
+	}
+
+}
+
+
+#footer{
+	padding: 0px;
+	position: relative;
+	#block-menu-block-9{
+		background: url(../images/header-background.png);
+		background-size: cover;
+		margin: 0px;
+		ul.menu{
+			margin: 0px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			background: url(../images/aphro-logo.png) no-repeat 20px center;
+			li{
+				list-style-type: none;
+				list-style-image: none;
+				font-size: 18px;
+				line-height: 30px;
+
+			}
+		}
+	}
+	#block-nodeblock-898{
+		margin: 0px;
+		background-color: #7e6b5a;
+		text-align: center;
+		p{
+			margin: 0px;
+			color: #FFF;
+			line-height: 36px;
+			a{
+				color: #FFF;
+				text-decoration: underline;
+			}
+		}
+	}
+}
